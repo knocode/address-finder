@@ -1,0 +1,31 @@
+name: Test and Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
+
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public

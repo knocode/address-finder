@@ -1,0 +1,41 @@
+{
+  "name": "@knocode/address-finder",
+  "version": "2.0.0",
+  "description": "Address Finder JS library for knocode address API via rapidapi.com",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Knocode",
+    "email": "support@knocode.com",
+    "url": "https://knocode.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knocode/address-finder.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "cypress": "^6.6.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.2.1",
+    "serve": "^11.3.2",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.2.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "start": "./node_modules/.bin/tsc-watch --onSuccess \"npx serve -p 8765\""
+  }
+}
