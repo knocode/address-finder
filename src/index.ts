@@ -156,7 +156,7 @@ export class Finder {
     this.injectStyle(this.document, defaultStyle)
 
     if (this.config.apiKey == testKey)
-      console.warn("Address-finder is using the test key, do not use this key in production.  The results from the API calls are intentionally incomplete.")
+      console.warn("Address-finder is using the test key, do not use this key in production.  The results from the API calls are intentionally incomplete.  Get your free API key from RapidAPI")
   }
 
   setSuggestions(value: string, suggestions: AutoCompleteResponse): void {

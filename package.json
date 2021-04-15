@@ -1,6 +1,6 @@
 {
   "name": "@knocode/address-finder",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Address Finder JS library for knocode address API via rapidapi.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
